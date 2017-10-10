@@ -1,44 +1,27 @@
-package no2sampai5;
+package algodat3;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayLinearList x = new ArrayLinearList(8);
+        ChainDouble c = new ChainDouble();
+        c.add(0, 1);
+        c.add(1, 2);
+        c.add(2, 3);
+        c.add(3, 4);
+        c.add(4, 5);
+        c.remove(1);
         
-        System.out.println("Ukuran awal x   : " +x.element.length);
-        System.out.println("Apakah x kosong : " +x.isEmpty());
+        System.out.println(c.toString());
         
-        x.add(0, "a");
-        x.add(1, "b");
-        x.add(2, "c");
-        x.add(3, "d");
-        x.add(4, "e");
-        x.add(5, 1);
-        x.add(6, 2);
-        x.add(7, 3);
+        ChainCircular cc = new ChainCircular();
         
-        System.out.println("\nIsi awal x      : " +x.toString());
-        System.out.println("x yang terisi     : " +x.size());
-        System.out.println("Element di index 3: " +x.get(3));
-        System.out.println("Index element c   : " +x.indexOf("c"));
-        x.remove(2);
-        System.out.println("\nIsi setelah index 2 dihapus    : " +x.toString());
-        System.out.println("Isi index 2 setelah dihapus    : " +x.get(2));
-        x.add(2, "f");
-        System.out.println("Isi index 2 setelah ditambah   : " +x.get(2));
-        System.out.println("Isi setelah index 2 ditambah   : " +x.toString());
+        cc.add(0, 1);
+        cc.add(1, 2);
+        cc.add(2, 3);
+        cc.add(3, 4);
+        cc.add(4, 5);
+        cc.remove(1);
         
-        x.add(8, 6);
-        x.add(9, 7);
-        x.add(10, 8);
-        
-//        System.out.println(x.size);
-        System.out.println("\nIsi setelah ditambah 3 array baru : " +x.toString());
-        System.out.println("Jumlah array sebelum dipotong     : " +x.element.length);
-        x.trimToSize();
-        System.out.println("Jumlah array setelah dipotong     : " +x.element.length);
-        x.setSize(4);
-        System.out.println("Isi array setelah di setSize 4    : " +x.toString());
-        x.clear();
-        System.out.println("Isi array setelah di clear        : " +x.toString());
+        System.out.println(c.toString());
     }
+    
 }
